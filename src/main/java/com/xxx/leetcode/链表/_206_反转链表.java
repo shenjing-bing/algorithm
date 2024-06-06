@@ -2,7 +2,7 @@ package 链表;
 
 /**
  * <a href="https://leetcode.cn/problems/reverse-linked-list/">...</a>
- * 
+ *
  * @author shenjingbin
  * @date 2021/9/27
  */
@@ -11,19 +11,18 @@ public class _206_反转链表 {
 
     /**
      * 双指针
-     * 
+     *
      * @param head
      * @return
      */
     public ListNode reverseList(ListNode head) {
         ListNode pre = null;
         ListNode cur = head;
-        while (head != null) {
-            ListNode temp = head.next;
+        while (cur != null) {
+            ListNode temp = cur.next;
             cur.next = pre;
             pre = cur;
             cur = temp;
-            head = temp;
         }
         return pre;
     }
@@ -33,12 +32,12 @@ public class _206_反转链表 {
      * 1->2->3 一直递归
      */
     public ListNode reverseList1(ListNode head) {
-        if (head==null||head.next==null){
+        if (head == null || head.next == null) {
             return head;
         }
         ListNode newNode = reverseList1(head.next);
-        head.next.next=head;
-        head.next=null;
+        head.next.next = head;
+        head.next = null;
         return newNode;
     }
 
@@ -66,7 +65,8 @@ public class _206_反转链表 {
         int val;
         ListNode next;
 
-        ListNode() {}
+        ListNode() {
+        }
 
         ListNode(int val) {
             this.val = val;

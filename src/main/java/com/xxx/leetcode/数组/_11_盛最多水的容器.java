@@ -33,7 +33,7 @@ public class _11_盛最多水的容器 {
     public int maxArea(int[] height) {
         int i = 0;
         int j = height.length - 1;
-        int maxArea = (j - i) * Math.min(height[i], height[j]);
+        int maxArea = 0;
         while (i < j) {
             maxArea = height[i] < height[j] ? Math.max(maxArea, (j - i) * height[i++])
                 : Math.max(maxArea, (j - i) * height[j--]);

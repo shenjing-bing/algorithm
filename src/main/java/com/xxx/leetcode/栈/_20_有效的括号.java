@@ -1,7 +1,8 @@
 package 栈;
 
+import java.util.Deque;
 import java.util.HashMap;
-import java.util.Stack;
+import java.util.LinkedList;
 
 /**
  * @author shenjingbin
@@ -17,7 +18,7 @@ public class _20_有效的括号 {
         map.put('}', '{');
         map.put(']', '[');
         char[] chars = s.toCharArray();
-        Stack<Character> stack = new Stack<>();
+        Deque<Character> stack = new LinkedList<>();
         for (char aChar : chars) {
             if (map.get(aChar) == null) {
                 stack.push(aChar);
