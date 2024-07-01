@@ -1,4 +1,4 @@
-package 链表;
+package com.xxx.leetcode;
 
 /**
  * @author shenjingbin
