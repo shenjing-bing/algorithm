@@ -7,8 +7,8 @@ package com.xxx.leetcode;
 
 public class _2_两数相加 {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode dummpary = new ListNode(-1);
-        ListNode temp = dummpary;
+        ListNode dummy = new ListNode(-1);
+        ListNode temp = dummy;
         int residue = 0;
         while (l1 != null || l2 != null) {
             int first = l1 == null ? 0 : l1.val;
@@ -24,7 +24,7 @@ public class _2_两数相加 {
         if (residue != 0) {
             temp.next = new ListNode(residue);
         }
-        return dummpary.next;
+        return dummy.next;
     }
 
     public static void main(String[] args) {
